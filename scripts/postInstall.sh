@@ -5,7 +5,7 @@ set -o allexport; source .env; set +o allexport;
 echo "Waiting for software to be ready ..."
 sleep 60s;
 
-target=${docker-compose port siglens 8081}
+target=$(docker-compose port siglens 8081)
 
 cat <<EOT > ./sample.sh
 curl -L https://github.com/siglens/pub-datasets/releases/download/v1.0.0/2kevents.json.tar.gz -o 2kevents.json.tar.gz
