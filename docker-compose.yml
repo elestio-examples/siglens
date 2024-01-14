@@ -1,6 +1,8 @@
 version: "3"
 services:
   siglens:
+    user: 0:0
+    restart: always
     image: siglens/siglens:${SOFTWARE_VERSION_TAG}
     ports:
       - "172.17.0.1:42011:8081"
