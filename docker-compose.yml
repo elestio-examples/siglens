@@ -1,0 +1,12 @@
+version: "3"
+services:
+  siglens:
+    image: siglens/siglens:${SOFTWARE_VERSION_TAG}
+    ports:
+      - "172.17.0.1:42011:8081"
+      - "172.17.0.1:23383:5122"
+    volumes:
+      - "./storage/data:/siglens/data"
+      - "./storage/logs:/siglens/logs"
+      - "./storage/server.yaml:/siglens/server.yaml"
+    command: ["./siglens", "--config", "server.yaml"]
