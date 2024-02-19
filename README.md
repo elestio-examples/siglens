@@ -30,8 +30,6 @@ To test SigLens and explore its features, you can load sample data using the fol
 
 3.  Execute Installation Command
 
-    Once the terminal opens, paste the following command to install the Portuguese language pack:
-
         ./samples.sh
 
 This command initiates the loading of sample data for testing purposes.
