@@ -17,4 +17,4 @@ do
 done
 EOT
 
-chmod +x ./sample.sh
+chmod +x ./samples.sh
