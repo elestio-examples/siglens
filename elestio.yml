@@ -1,6 +1,6 @@
 ports:
   - protocol: "HTTPS"
-    targetProtocol: "HTTP"
+    targetProtocol: "HTTPS"
     listeningPort: "443"
     targetPort: "23383"
     targetIP: "172.17.0.1"
@@ -11,7 +11,7 @@ ports:
     password: "random_password"
     loginTitle: "Siglens"
   - protocol: "HTTPS"
-    targetProtocol: "HTTP"
+    targetProtocol: "HTTPS"
     listeningPort: "48926"
     targetPort: "42011"
     targetIP: "172.17.0.1"

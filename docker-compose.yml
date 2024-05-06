@@ -11,4 +11,6 @@ services:
       - "./storage/data:/siglens/data"
       - "./storage/logs:/siglens/logs"
       - "./storage/server.yaml:/siglens/server.yaml"
+      - /root/.acme.sh/vm.elestio.app/fullchain.cer:/etc/fullchain.cer
+      - /root/.acme.sh/vm.elestio.app/vm.elestio.app.key:/etc/vm.elestio.app.key
     command: ["./siglens", "--config", "server.yaml"]

@@ -13,7 +13,7 @@ tar -xvf 2kevents.json.tar.gz
 
 for ((i=1; i<=20; i++))
 do
-    curl http://${target}/elastic/_bulk -i --data-binary "@2kevents.json" -o res.txt 
+    curl https://${DOMAIN}:48926/elastic/_bulk -i --data-binary "@2kevents.json" -o res.txt 
 done
 EOT
 

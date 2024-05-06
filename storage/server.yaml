@@ -1,8 +1,10 @@
 ---
-## Address port for SigLens ingestion server
+## IP and port for SigLens ingestion server
+ingestListenIP: 0.0.0.0
 ingestPort: 8081
 
-## Address port for SigLens query server, including UI
+## IP and port for SigLens query server, including UI
+queryListenIP: 0.0.0.0
 queryPort: 5122
 
 ## Location for storing local node data
@@ -17,13 +19,14 @@ pqsEnabled: false
 esVersion: "7.9.3"
 
 ## Number of hours data will be stored/retained on persistent storage.
-# retentionHours: 2160
+# retentionHours: 360
 
 ## Percent of available RAM that siglens will occupy
 # memoryThresholdPercent: 80
 
 ## For ephemeral servers (docker, k8s) set this variable to unique container name to persist data across restarts:
-# ssInstanceName: ""
+# the default ssInstanceName is "sigsingle"
+ssInstanceName: "sigsingle"
 
 log:
   logPrefix: ./logs/
@@ -33,3 +36,12 @@ log:
 
   ## Compress log file
   # compressLogFile: false
+
+# TLS configuration
+tls:
+  enabled: true # Set to true to enable TLS
+  certificatePath: "/etc/fullchain.cer" # Path to the certificate file
+  privateKeyPath: "/etc/vm.elestio.app.key" # Path to the private key file
+
+# SigLens server hostname
+queryHostname: ""
